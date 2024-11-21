@@ -64,7 +64,7 @@ public class DeveloperController {
         var getDeveloperByUserIdAsyncQuery = new GetDeveloperByUserIdAsyncQuery(userId);
         var developer = developerQueryService.handle(getDeveloperByUserIdAsyncQuery);
 
-        var updateDeveloperCommand = UpdateDeveloperCommandFromResourceAssembler.toCommandFromResource(developer.get().getId(), resource);
+        var updateDeveloperCommand = UpdateDeveloperCommandFromResourceAssembler.toCommandFromResource(developer.get().getUserId(), resource);
         var updatedDeveloper = developerCommandService.handle(updateDeveloperCommand);
         if (updatedDeveloper.isEmpty()) {
             return ResponseEntity.notFound().build();

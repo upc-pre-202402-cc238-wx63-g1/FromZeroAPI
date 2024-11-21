@@ -28,7 +28,7 @@ public class DeveloperQueryServiceImpl implements DeveloperQueryService{
 
     @Override
     public Optional<Developer> handle(GetDeveloperByUserIdAsyncQuery query) {
-        return developerRepository.findDeveloperByUser_Id(query.id());
+        return developerRepository.findDeveloperByUser_Id(query.userId());
     }
 
     @Override

@@ -1,7 +1,7 @@
 package com.fromzero.backend.user.domain.model.commands;
 
 public record UpdateDeveloperCommand(
-        Long developerId,
+        Long userId,
         String firstName,
         String lastName,
         String description,

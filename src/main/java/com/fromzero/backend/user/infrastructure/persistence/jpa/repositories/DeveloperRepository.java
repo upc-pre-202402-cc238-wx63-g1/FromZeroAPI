@@ -8,5 +8,5 @@ import java.util.Optional;
 
 @Repository
 public interface DeveloperRepository extends JpaRepository<Developer, Long>{
-    Optional<Developer> findDeveloperByUser_Id(Long id);
+    Optional<Developer> findDeveloperByUser_Id(Long userId);
 }
